@@ -18,9 +18,25 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * The Back.
+     */
     LinearLayout back;
+    /**
+     * The Si.
+     */
+    Intent si;
+    /**
+     * The Adb.
+     */
     AlertDialog.Builder adb;
+    /**
+     * The Colors.
+     */
     final String[] colors = {"Red" , "Green" , "Blue"};
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -30,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
         back = (LinearLayout) findViewById(R.id.back);
     }
 
-    
+
+    /**
+     * Btn 1.
+     *
+     * @param view the view
+     */
     public void btn1(View view)
     {
         int[] color = new int[]{0, 0, 0};
@@ -48,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
         adb.show();
     }
 
+    /**
+     * Btn 2.
+     *
+     * @param view the view
+     */
     public void btn2(View view) {
         AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setTitle("Choose color");
@@ -83,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
         adb.show();
     }
 
+    /**
+     * Btn 3.
+     *
+     * @param view the view
+     */
     public void btn3(View view) {
         AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setTitle("Reset BackgroundColor");
@@ -107,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
         adb.show();
     }
 
+
+    /**
+     * Btn 4.
+     *
+     * @param view the view
+     */
     public void btn4(View view) {
         AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setTitle("Enter text");
